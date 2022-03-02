@@ -3,9 +3,9 @@ import { api } from "../../services/api";
 import { useContext } from "react";
 import { useState } from "react";
 import { PokemonContext } from "../../context/usePokemon";
-import { CardEmpty } from "../CardEmpty";
 import { PokemonCard } from "../PokemonCard";
 import { Container, List } from "./ListEmpty.styles";
+import emptyImg from "../../assets/images/empty.png";
 
 export const ListEmpty = () => {
   const { favoriteList } = useContext(PokemonContext);
@@ -23,10 +23,9 @@ export const ListEmpty = () => {
       setListFilled(filledList);
       let rest = 12 - filledList.length;
       let emptyList = Array(rest).map((_) => {
-        return <CardEmpty />;
+        return { emptyImg };
       });
       setListEmpty(emptyList);
-      console.log(emptyList);
     }
     loadFavorites();
   }, [favoriteList]);
@@ -34,7 +33,6 @@ export const ListEmpty = () => {
   return (
     <Container>
       <List>{listFilled}</List>
-      <List>{listEmpty}</List>
     </Container>
   );
 };

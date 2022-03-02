@@ -7,9 +7,12 @@ import {
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Colors } from "../../styles/TypesTheme";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 export const DetailsPokemonBaseStats = () => {
   const { id } = useParams();
+  const [pokemonDetails, setPokemonDetails] = useState([]);
   const [details, setDetails] = useState({
     hp: 0,
     atk: 0,
@@ -21,6 +24,7 @@ export const DetailsPokemonBaseStats = () => {
   useEffect(() => {
     async function loadPokemonsDetails() {
       const { data } = await api.get(`/pokemon/${id}`);
+      setPokemonDetails(data);
       let details = {
         hp: data.stats[0].base_stat,
         atk: data.stats[1].base_stat,
@@ -30,57 +34,94 @@ export const DetailsPokemonBaseStats = () => {
         spd: data.stats[5].base_stat,
       };
       setDetails(details);
-      console.log(data.stats[0].base_stat);
     }
     loadPokemonsDetails();
   }, [id]);
 
+  const type = [pokemonDetails.types?.map((type) => type.type.name)[0]];
+
   return (
     <Container>
       <thead>
-        <TableTitle>Base Stats</TableTitle>
+        <TableTitle style={{ color: Colors[type] }}>Base Stats</TableTitle>
       </thead>
       <tbody>
         <tr>
-          <TableStats>HP</TableStats>
+          <TableStats style={{ color: Colors[type] }}>HP</TableStats>
           <TableResults>{details.hp}</TableResults>
           <td>
-            <input type="range" name="" id="" />
+            <ProgressBar
+              completed={details.hp}
+              bgColor={Colors[type]}
+              isLabelVisible={false}
+              height={"6px"}
+              width={"300px"}
+            />
           </td>
         </tr>
         <tr>
-          <TableStats>ATK</TableStats>
+          <TableStats style={{ color: Colors[type] }}>ATK</TableStats>
           <TableResults>{details.atk}</TableResults>
           <td>
-            <input type="range" name="" id="" />
+            <ProgressBar
+              completed={details.atk}
+              bgColor={Colors[type]}
+              isLabelVisible={false}
+              height={"6px"}
+              width={"300px"}
+            />
           </td>
         </tr>
         <tr>
-          <TableStats>DEF</TableStats>
+          <TableStats style={{ color: Colors[type] }}>DEF</TableStats>
           <TableResults>{details.def}</TableResults>
           <td>
-            <input type="range" name="" id="" />
+            <ProgressBar
+              completed={details.def}
+              bgColor={Colors[type]}
+              isLabelVisible={false}
+              height={"6px"}
+              width={"300px"}
+            />
           </td>
         </tr>
         <tr>
-          <TableStats>SATK</TableStats>
+          <TableStats style={{ color: Colors[type] }}>SATK</TableStats>
           <TableResults>{details.satk}</TableResults>
           <td>
-            <input type="range" name="" id="" />
+            <ProgressBar
+              completed={details.satk}
+              bgColor={Colors[type]}
+              isLabelVisible={false}
+              height={"6px"}
+              width={"300px"}
+            />
           </td>
         </tr>
         <tr>
-          <TableStats>SDEF</TableStats>
+          <TableStats style={{ color: Colors[type] }}>SDEF</TableStats>
           <TableResults>{details.sdef}</TableResults>
           <td>
-            <input type="range" name="" id="" />
+            <ProgressBar
+              completed={details.sdef}
+              bgColor={Colors[type]}
+              isLabelVisible={false}
+              height={"6px"}
+              width={"300px"}
+            />
           </td>
         </tr>
         <tr>
-          <TableStats>SPD</TableStats>
+          <TableStats style={{ color: Colors[type] }}>SPD</TableStats>
           <TableResults>{details.spd}</TableResults>
           <td>
-            <input type="range" name="" id="" />
+            <ProgressBar
+              completed={details.spd}
+              bgColor={Colors[type]}
+              isLabelVisible={false}
+              height={"6px"}
+              width={"300px"}
+            />
           </td>
         </tr>
       </tbody>

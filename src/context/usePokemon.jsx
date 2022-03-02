@@ -27,20 +27,13 @@ export function PokemonProvider({ children }) {
 
   function addFavorite(name) {
     let pokemonSelect = pokemonList.filter((pokemon) => pokemon.name === name);
-    //  let isFavorite = favoriteList.includes(pokemonSelect)
     if (favoriteList.length < 12) {
       setFavoriteList([...favoriteList, pokemonSelect[0].name]);
-    } else {
-      toast.error("Lista cheia");
     }
-
-    console.log(name);
-    console.log(pokemonSelect);
   }
 
   function removeFavorite(name) {
     let pokemonSelect = pokemonList.filter((pokemon) => pokemon.name === name);
-
     let newList = favoriteList.filter(
       (pokemon) => pokemon.name !== pokemonSelect.name
     );

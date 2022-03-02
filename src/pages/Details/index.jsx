@@ -1,7 +1,7 @@
 import { DetailsPokemonBaseStats } from "../../components/DetailsPokemonBaseStats";
 import { Navbar } from "../../components/Navbar";
 import { DetailsPokemonImg } from "../../components/DetailsPokemonImg";
-import { Container, Name } from "./Details.styles";
+import { Container, Name, DetailsPoke, Content } from "./Details.styles";
 import { DetailsPokemonName } from "../../components/DetailsPokemonName";
 import { DetailsPokemonType } from "../../components/DetailsPokemonType";
 import { DetailsPokemonDimensions } from "../../components/DetailsPokemonDimensions";
@@ -10,24 +10,27 @@ import { BorderHeaderDetails } from "../../components/BorderHeaderDetails";
 
 export const Details = () => {
   return (
-    <>
-      <>
-        <BorderHeaderDetails />
-        <Navbar />
-        <Container>
+    <Container>
+      <div className="header">
+        <BorderHeaderDetails className="border-header" />
+        <Navbar className="navbar" />
+      </div>
+
+      <Content>
+        <div className="img">
           <DetailsPokemonImg />
-          <div>
-            <Name>
-              <DetailsPokemonName />
-            </Name>
-            <DetailsPokemonType className="type" />
-            <DetailsPokemonDimensions className="dimensions" />
-            <DetailsPokemonDescription className="description" />
-            <DetailsPokemonBaseStats className="stats" />
+          <div className="name">
+            <DetailsPokemonName className="title" />
           </div>
-        </Container>
-      </>
-    </>
+        </div>
+        <DetailsPoke>
+          <DetailsPokemonType className="type" />
+          <DetailsPokemonDimensions className="dimensions" />
+          <DetailsPokemonDescription className="description" />
+          <DetailsPokemonBaseStats className="stats" />
+        </DetailsPoke>
+      </Content>
+    </Container>
   );
 };
 /*

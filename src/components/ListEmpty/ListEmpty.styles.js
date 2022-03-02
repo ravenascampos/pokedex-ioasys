@@ -1,16 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-left: 15rem;
-  margin-right: 10rem;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 3rem;
+  width: 26.75rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+
+  @media (min-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 3rem 3rem;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.125rem 1.125rem;
+
+  @media (min-width: 600px) {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;

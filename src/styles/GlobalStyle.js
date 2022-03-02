@@ -11,23 +11,15 @@ export default createGlobalStyle`
     --background: #f7f7f7;
     --secondaryColor: #ec0344;
 
-    //cores pokemons tipos
-    --rock: #b69e31;
-    --ghost: #70559b;
-    --steel: #b7b9d0;
-    --grass: #74cb48;
-    --psychic: #fb5584;
-    --ice: #9ad6df;
-    --dark: #75574c;
-    --normal: #aaa67f;
-    --fighting: #c12239;
-    --flying: #a891ec;
-    --poison: #a43e9e;
-    --ground: #dec16b;
-    --bug: #a7b723;
-    --fire: #f57d31;
-    --electric: #f9cf30;
-    --dragon: #7037ff;
+}
+
+html {
+    @media (max-width: 1080px) {
+        font-size: 93.75%; //16 * 0.9375 = 15px
+    }
+    @media (max-width: 720px) {
+        font-size: 87.5%; // 14px
+    }
 }
 
 *, *::after, *::before {
@@ -38,15 +30,21 @@ export default createGlobalStyle`
 }
 
 body {
-    width: 100%;
     height: 100vh;
     background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text}
+    color: ${({ theme }) => theme.text};
+    max-width: 1024px;
+    -webkit-font-smoothing: antialiased;
 }
 
 button {
     border: none;
     cursor: pointer;
+}
+
+[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 label {

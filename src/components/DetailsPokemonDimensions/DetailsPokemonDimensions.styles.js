@@ -2,6 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  justify-content: space-around;
+  margin-left: 2rem;
+
+  @media (min-width: 600px) {
+    width: 100%;
+    margin-left: 8rem;
+  }
 
   .weight,
   .height,
@@ -9,14 +16,14 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 41px;
+    margin-right: 2.562rem;
   }
 
   .abilities {
     margin-left: 1rem;
     margin-right: 0;
+    text-transform: capitalize;
   }
-
   .weight-text,
   .height-text,
   .abilities-text {
@@ -41,8 +48,9 @@ export const Container = styled.div`
   .abilities-title {
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
     color: var(--lightGray);
+    text-transform: capitalize;
   }
 `;

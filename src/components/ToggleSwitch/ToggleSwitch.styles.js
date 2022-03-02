@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  margin-right: 1.5rem;
   background: transparent;
+  margin-right: 2rem;
+
+  img {
+    width: 2.437rem;
+    height: 1.687rem;
+  }
 `;

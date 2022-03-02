@@ -3,12 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-left: 19px;
+
+  @media (min-width: 600px) {
+    width: 100%;
+    margin-left: 8rem;
+  }
   p {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
     text-align: center;
   }
 `;

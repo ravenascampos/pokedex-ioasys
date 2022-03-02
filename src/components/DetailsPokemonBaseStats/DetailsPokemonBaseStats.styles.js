@@ -1,36 +1,34 @@
 import styled from "styled-components";
 
 export const Container = styled.table`
-  width: 400px;
-  height: 16px;
+  width: 25rem;
+  height: 1rem;
   border-spacing: 0;
+  margin-left: 2rem;
 
-  input {
-    width: 300px;
-    border-radius: 0;
-    color: var(--grass);
+  @media (min-width: 600px) {
+    width: 100%;
+    margin-left: 5rem;
   }
 `;
 
 export const TableTitle = styled.th`
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 16px;
+  font-size: 1.125rem;
+  line-height: 1rem;
   text-align: left;
-  padding-bottom: 20px;
-  color: var(--grass);
+  padding-bottom: 1.25rem;
 `;
 
 export const TableStats = styled.td`
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   text-align: left;
-  width: 40px;
-  padding: 0 20px 7px 0;
-  color: var(--grass);
+  width: 2.5rem;
+  padding: 0 1.25rem 0.5rem 0;
   border-right: 1px solid var(--lightGray);
 `;
 
@@ -38,7 +36,7 @@ export const TableResults = styled.td`
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1rem;
   text-align: left;
-  padding: 0 14px 7px 14px;
+  padding: 0 0.875rem 0.5rem 0.875rem;
 `;

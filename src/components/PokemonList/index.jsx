@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import { PokemonContext } from "../../context/usePokemon";
 import { PokemonCard } from "../PokemonCard";
 import { Container, List } from "./PokemonList.styles";
+import pokebolaGif from "../../assets/images/pokebola-loading.gif";
 
 export const PokemonList = () => {
   const { pokemonList, loading } = useContext(PokemonContext);
   return (
     <Container>
       {loading ? (
-        <span>carregando...</span>
+        <span>
+          <img src={pokebolaGif} alt="pokebola" />
+        </span>
       ) : (
         <List>
           {pokemonList.map((pokemon) => (

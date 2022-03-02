@@ -43,7 +43,6 @@ export const DetailsPokemonName = () => {
       >
         <img src={isFavorite ? favoriteHeartImg : notFavoriteHeartImg} alt="" />
       </button>
-
       <h1 style={{ color: Colors[type] }}>{id}</h1>
       <span style={{ color: Colors[type] }}>#00{pokemonDetails.id}</span>
     </Container>

@@ -15,7 +15,7 @@ export const DetailsPokemonDimensions = () => {
       setPokemonDetails(data);
     }
     loadPokemonsDetails();
-  }, []);
+  }, [id]);
 
   const weight = pokemonDetails.weight;
   const height = pokemonDetails.height;
@@ -32,7 +32,7 @@ export const DetailsPokemonDimensions = () => {
       <div className="height">
         <div className="height-text">
           <img src={heightImg} alt="" />
-          <p>{height * 10} cm</p>
+          <p>{height / 10} m</p>
         </div>
         <p className="height-title">Height</p>
       </div>

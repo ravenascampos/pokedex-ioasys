@@ -13,13 +13,15 @@ export const SearchBar = () => {
     searchPokemon(name);
   }, [name]);
 
-  console.log(name);
-
   return (
     <Container>
       <form onSubmit={(e) => e.preventDefault()}>
         <Search>
-          <input type="text" onChange={(e) => setName(e.currentTarget.value)} />
+          <input
+            type="text"
+            onChange={(e) => setName(e.currentTarget.value)}
+            placeholder="Buscar pokemon"
+          />
           <label>Buscar</label>
           <button>
             <FiSearch className="search-icon" />
