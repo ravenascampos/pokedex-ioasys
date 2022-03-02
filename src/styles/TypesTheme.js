@@ -16,4 +16,5 @@ export const Colors = {
   electric: "#f9cf30",
   dragon: "#7037ff",
   water: "#6493EB",
+  fairy: "#E69EAC",
 };
