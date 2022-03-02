@@ -12,7 +12,7 @@ export function PokemonProvider({ children }) {
   async function loadPokemons() {
     setLoading(true);
     try {
-      const { data } = await api.get("/pokemon?limit=13");
+      const { data } = await api.get("/pokemon?limit=1118");
       setPokemonList(data.results);
       setLoading(false);
     } catch (error) {
