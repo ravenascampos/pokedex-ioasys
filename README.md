@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+<p align="center">
+  <img alt="Favicon" src="https://raw.githubusercontent.com/ravenascampos/pokeapi/Developer/public/favicon.ico"  />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 💻 Projeto
 
-In the project directory, you can run:
+Projeto desenvolvido como desafio do Camp Ioasys Trilha Front-end. 
+Todos os dados sobre os pokémon como nome, número, tipo, imagem e entre outras coisas, foram disponilizadas com o uso da API REST [PokéApi](https://pokeapi.co/).
 
-### `yarn start`
+### Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [x] **Catálogo de pokemons**: Listar os pokémon com o uso da API REST, retornando todos na mesma página.
 
-### `yarn test`
+- [x] **Tela de favoritos**: Salva até 12 pokemons na listagem.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] **Busca de pokemons**: Busca por nome do pokemon.
 
-### `yarn build`
+- [x] Estilo de cores definidos de acordo com a tipagem do pokemon. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] **Tela de detalhes dos pokemons**: Apresenta informações como nome, tipo, foto, hp, ataque, defesa, ataque especial, defesa especial, peso e altura, bem como o valor que foi feito com base no peso do pokemon, multiplicado por 10.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Em desenvolvimento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- DarkMode
 
-### `yarn eject`
+### Conceitos abordados
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Uso de css-in-js e criação de Tema global com o `ThemeProvider` do [styled-components](https://www.styled-components.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Consumo da api do pokemon em [Pokeapi](https://pokeapi.co/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## :rocket: Tecnologias
 
-## Learn More
+- [React](https://pt-br.reactjs.org/)
+- [React-Icons](https://react-icons.netlify.com/)
+- [React Router](https://reactrouter.com/web/guides/quick-start)
+- [Styled-components](https://www.styled-components.com/)
+- [Create React App](https://github.com/facebook/create-react-app).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📥 Instalação e execução
 
-### Code Splitting
+Faça um clone desse repositório e acesse o diretório.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+$ git clone https://github.com/ravenascampos/pokedex-ioasys.git && cd pokeapi
+```
 
-### Analyzing the Bundle Size
+```bash
+# Instalando as dependências
+$ yarn
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Executanto aplicação
+$ yarn start
 
-### Making a Progressive Web App
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## :muscle: Contribuir
 
-### Advanced Configuration
+Faça o `fork` e clone o projeto a partir do seu usuário.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+# Clonando projeto
+$ git clone https://github.com/SEU-NOME-DE-USUARIO/pokedex-ioasys.git
 
-### Deployment
+# Criando um branch
+$ git branch minha-alteracao
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Acessando o novo branch
+$ git checkout -b minha-alteracao
 
-### `yarn build` fails to minify
+# Adicionando os arquivos alterados
+$ git add .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Criando commit e a mensagem
+$ git commit -m "Corrigindo...."
+
+# Enviando alterações para o brach
+$ git push origin minha-alteracao
+```
+
+Você deve navegar até o seu repositório onde fez o fork e clicar no botão _New pull request_ no lado esquerdo da página.
+
+## 📝 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
