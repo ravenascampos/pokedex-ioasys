@@ -15,6 +15,8 @@ Todos os dados sobre os pokémon como nome, número, tipo, imagem e entre outras
 
 - [x] **Tela de favoritos**: Salva até 12 pokemons na listagem.
 
+- [x] **Busca de pokemons**: Busca por nome do pokemon.
+
 - [x] Estilo de cores definidos de acordo com a tipagem do pokemon. 
 
 - [x] **Tela de detalhes dos pokemons**: Apresenta informações como nome, tipo, foto, hp, ataque, defesa, ataque especial, defesa especial, peso e altura, bem como o valor que foi feito com base no peso do pokemon, multiplicado por 10.
